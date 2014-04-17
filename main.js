@@ -24,3 +24,15 @@ var swapCase = function(string) {
         }).join('')
     }).join(' ')
 }
+
+var letterCount = function(string) {
+    var arr = string.split(' ');
+    var doubles = [];
+    arr.map(function(a, i) {
+        var obj = {};
+        a.split('').map(function(a) {
+            obj[a] === 1 ? doubles.push(i) : obj[a] = 1;
+        })
+    })
+    return doubles[0] === undefined ? -1 : arr[doubles[0]];
+}

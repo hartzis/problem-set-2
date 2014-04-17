@@ -22,3 +22,11 @@ describe("swapCase that takes a single string parameter and swaps the case of ea
         expect(swapCase('awAl is! tOO')).toEqual('AWaL IS! Too');
     })
 })
+
+describe("letterCount takes a single string parameter and returns the first word with the greatest number of repeated letters", function() {
+    it("should return first word with 2 same letters", function() {
+        expect(letterCount('Today, is the greatest day ever!')).toEqual('greatest');
+        expect(letterCount('Today, is too cool the greatest day ever!')).toEqual('too');
+        expect(letterCount('Today, is freaking awesum!')).toEqual(-1);
+    })
+})
